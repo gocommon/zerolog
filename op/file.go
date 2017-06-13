@@ -11,6 +11,8 @@ import (
 
 	"io"
 
+	"path"
+
 	"github.com/rs/zerolog"
 )
 
@@ -155,6 +157,7 @@ func (w *FileLogWriter) WriteLevel(l zerolog.Level, p []byte) (n int, err error)
 }
 
 func (w *FileLogWriter) createLogFile() (*os.File, error) {
+	os.MkdirAll(path.Dir(w.Filename), os.ModePerm)
 	// Open the log file
 	return os.OpenFile(w.Filename, os.O_WRONLY|os.O_APPEND|os.O_CREATE, 0660)
 }

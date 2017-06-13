@@ -14,6 +14,8 @@ import (
 	"github.com/rs/zerolog"
 )
 
+var _ zerolog.LevelWriter = &FileLogWriter{}
+
 // FileLogWriter implements LoggerInterface.
 // It writes messages by lines limit, file size limit, or time frequency.
 type FileLogWriter struct {

@@ -10,6 +10,8 @@ import (
 	"github.com/rs/zerolog"
 )
 
+var _ zerolog.LevelWriter = &ConsoleWriter{}
+
 type Brush func([]byte) []byte
 
 func NewBrush(color string) Brush {
@@ -60,8 +62,14 @@ func (cw *ConsoleWriter) WriteLevel(l zerolog.Level, p []byte) (n int, err error
 	}
 	if runtime.GOOS == "windows" {
 		return cw.Write(p)
-	} else {
-		return cw.Write(colors[l](p))
+
 	}
-	return 0, nil
+
+	_, err = cw.Write(colors[l](p))
+	if err != nil {
+		return 0, err
+	}
+
+	return len(p), nil
+
 }

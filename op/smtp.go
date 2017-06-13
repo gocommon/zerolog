@@ -15,6 +15,8 @@ const (
 	subjectPhrase = "Diagnostic message from server"
 )
 
+var _ zerolog.LevelWriter = &SmtpWriter{}
+
 // smtpWriter implements LoggerInterface and is used to send emails via given SMTP-server.
 type SmtpWriter struct {
 	Username           string        `json:"Username"`

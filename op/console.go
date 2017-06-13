@@ -10,8 +10,6 @@ import (
 	"github.com/rs/zerolog"
 )
 
-var _ zerolog.LevelWriter = NewConsole()
-
 type Brush func([]byte) []byte
 
 func NewBrush(color string) Brush {
@@ -45,10 +43,10 @@ type ConsoleWriter struct {
 }
 
 // create ConsoleWriter returning as LoggerInterface.
-func NewConsole() zerolog.LevelWriter {
+func NewConsole(l zerolog.Level) zerolog.LevelWriter {
 	return &ConsoleWriter{
 		w:     os.Stdout,
-		Level: zerolog.DebugLevel,
+		Level: l,
 	}
 }
 

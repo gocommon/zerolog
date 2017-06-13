@@ -7,7 +7,7 @@ import (
 )
 
 func Test_Console(t *testing.T) {
-	log := zerolog.New(NewConsole())
+	log := zerolog.New(NewConsole(zerolog.DebugLevel))
 
 	log.Debug().Msg("debug")
 	log.Info().Msg("info")

@@ -58,7 +58,7 @@ func (cw *ConsoleWriter) Write(p []byte) (n int, err error) {
 
 func (cw *ConsoleWriter) WriteLevel(l zerolog.Level, p []byte) (n int, err error) {
 	if cw.Level > l {
-		return 0, nil
+		return len(p), nil
 	}
 	if runtime.GOOS == "windows" {
 		return cw.Write(p)

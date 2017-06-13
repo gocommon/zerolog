@@ -115,7 +115,7 @@ func (s *SmtpWriter) Write(b []byte) (int, error) {
 // it will send an email with subject and only this message.
 func (s *SmtpWriter) WriteLevel(l zerolog.Level, p []byte) (n int, err error) {
 	if l < s.Level {
-		return 0, nil
+		return len(p), nil
 	}
 
 	return s.Write(p)

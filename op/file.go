@@ -149,7 +149,7 @@ func (w *FileLogWriter) Write(p []byte) (n int, err error) {
 // write logger message into file.
 func (w *FileLogWriter) WriteLevel(l zerolog.Level, p []byte) (n int, err error) {
 	if l < w.Level {
-		return 0, nil
+		return len(p), nil
 	}
 
 	return w.Write(p)

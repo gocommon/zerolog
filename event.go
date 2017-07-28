@@ -69,6 +69,11 @@ func (e *Event) Enabled() bool {
 	return e.enabled
 }
 
+// Go Call Msg("")
+func (e *Event) Go() {
+	e.Msg("")
+}
+
 // Msg sends the *Event with msg added as the message field if not empty.
 //
 // NOTICE: once this method is called, the *Event should be disposed.

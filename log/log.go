@@ -5,7 +5,7 @@ import (
 	"context"
 	"os"
 
-	"github.com/rs/zerolog"
+	"github.com:weisd/zerolog"
 )
 
 // Logger is the global logger.

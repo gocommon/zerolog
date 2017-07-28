@@ -1,6 +1,6 @@
 # Zero Allocation JSON Logger
 
-[![godoc](http://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/rs/zerolog) [![license](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://raw.githubusercontent.com/rs/zerolog/master/LICENSE) [![Build Status](https://travis-ci.org/rs/zerolog.svg?branch=master)](https://travis-ci.org/rs/zerolog) [![Coverage](http://gocover.io/_badge/github.com/rs/zerolog)](http://gocover.io/github.com/rs/zerolog)
+[![godoc](http://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com:weisd/zerolog) [![license](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://raw.githubusercontent.com/rs/zerolog/master/LICENSE) [![Build Status](https://travis-ci.org/rs/zerolog.svg?branch=master)](https://travis-ci.org/rs/zerolog) [![Coverage](http://gocover.io/_badge/github.com:weisd/zerolog)](http://gocover.io/github.com:weisd/zerolog)
 
 The zerolog package provides a fast and simple logger dedicated to JSON output.
 
@@ -22,7 +22,7 @@ To keep the code base and the API simple, zerolog focuses on JSON logging only. 
 ## Usage
 
 ```go
-import "github.com/rs/zerolog/log"
+import "github.com:weisd/zerolog/log"
 ```
 
 ### A global logger can be use for simple logging
@@ -33,7 +33,7 @@ log.Info().Msg("hello world")
 // Output: {"level":"info","time":1494567715,"message":"hello world"}
 ```
 
-NOTE: To import the global logger, import the `log` subpackage `github.com/rs/zerolog/log`.
+NOTE: To import the global logger, import the `log` subpackage `github.com:weisd/zerolog/log`.
 
 ```go
 log.Fatal().
@@ -171,7 +171,7 @@ stdlog.Print("hello world")
 
 ### Integration with `net/http`
 
-The `github.com/rs/zerolog/hlog` package provides some helpers to integrate zerolog with `http.Handler`.
+The `github.com:weisd/zerolog/hlog` package provides some helpers to integrate zerolog with `http.Handler`.
 
 In this example we use [alice](https://github.com/justinas/alice) to install logger for better readability.
 

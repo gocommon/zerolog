@@ -2,14 +2,17 @@ package op
 
 import (
 	"testing"
+	// "github.com/gocommon/rotatefile"
+	// "github.com/gocommon/zerolog"
 )
 
 func Test_File(t *testing.T) {
-
-	// f, err := NewFileWriter("./file.log", zerolog.DebugLevel)
+	// fd, err := rotatefile.NewWriter()
 	// if err != nil {
 	// 	t.Fatal(err)
 	// }
+
+	// f := NewFileWriter(fd, zerolog.DebugLevel)
 
 	// log := zerolog.New(f)
 

@@ -7,8 +7,8 @@ import (
 	"net/http"
 
 	"github.com/rs/xid"
-	"github.com/rs/zerolog"
-	"github.com/rs/zerolog/log"
+	"github.com:weisd/zerolog"
+	"github.com:weisd/zerolog/log"
 )
 
 // FromRequest gets the logger in the request's context.

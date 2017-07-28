@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/rs/zerolog"
+	"github.com:weisd/zerolog"
 )
 
 func ExampleNew() {

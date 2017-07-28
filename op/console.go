@@ -7,7 +7,7 @@ import (
 
 	"bytes"
 
-	"github.com:weisd/zerolog"
+	"github.com/gocommon/zerolog"
 )
 
 var _ zerolog.LevelWriter = &ConsoleWriter{}

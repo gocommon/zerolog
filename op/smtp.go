@@ -8,7 +8,7 @@ import (
 
 	"bytes"
 
-	"github.com:weisd/zerolog"
+	"github.com/gocommon/zerolog"
 )
 
 const (

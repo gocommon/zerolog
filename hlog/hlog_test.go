@@ -13,7 +13,7 @@ import (
 
 	"net/http/httptest"
 
-	"github.com:weisd/zerolog"
+	"github.com/gocommon/zerolog"
 )
 
 func TestNewHandler(t *testing.T) {

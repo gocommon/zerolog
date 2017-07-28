@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"time"
 
-	"github.com/rs/zerolog/internal/json"
+	"github.com/gocommon/zerolog/internal/json"
 )
 
 // Context configures a new sub-logger with contextual fields.

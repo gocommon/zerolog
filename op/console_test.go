@@ -3,7 +3,7 @@ package op
 import (
 	"testing"
 
-	"github.com:weisd/zerolog"
+	"github.com/gocommon/zerolog"
 )
 
 func Test_Console(t *testing.T) {

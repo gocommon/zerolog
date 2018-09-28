@@ -1,6 +1,7 @@
 package zerolog
 
 import (
+	"bytes"
 	"fmt"
 	"io/ioutil"
 	"os"
@@ -72,6 +73,11 @@ func (e *Event) Enabled() bool {
 // Go Call Msg("")
 func (e *Event) Go() {
 	e.Msg("")
+}
+
+// Buffer return buf data
+func (e *Event) Buffer() *bytes.Buffer {
+	return bytes.NewBuffer(e.buf)
 }
 
 // Msg sends the *Event with msg added as the message field if not empty.
